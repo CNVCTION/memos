@@ -1,6 +1,7 @@
 import "@github/relative-time-element";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import React, { useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { Toaster } from "react-hot-toast";
@@ -71,6 +72,7 @@ function Main() {
         </InstanceProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
+      <SpeedInsights />
     </ErrorBoundary>
   );
 }
